@@ -13,6 +13,7 @@ vectorizer = TfidfVectorizer(
     ngram_range=(1, 2)
 )
 
+data["clean_text"] = data["clean_text"].fillna("")
 tfidf_matrix = vectorizer.fit_transform(data["clean_text"])
 
 # Calculate similarity
